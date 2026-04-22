@@ -10,6 +10,9 @@ export default function Listings() {
                     if (screen === 'ListingDetail') {
                         router.push({ pathname: '/listingdetail' as any, params: { listing: JSON.stringify(params?.listing) } });
                     }
+                    if (screen === 'profile') {
+                        router.push('/profile' as any);
+                    }
                 },
                 goBack: () => router.back(),
             }}

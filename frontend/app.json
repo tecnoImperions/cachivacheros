@@ -1,11 +1,11 @@
 {
   "expo": {
-    "name": "frontend",
-    "slug": "frontend",
+    "name": "cachivachero",
+    "slug": "cachivachero",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
-    "scheme": "frontend",
+    "scheme": "cachivachero",
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
     "ios": {

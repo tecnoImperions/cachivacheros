@@ -15,6 +15,23 @@ class Listing extends Model
         'cloudinary_public_id',
         'status',
         'category',
+        'condition',
+        'delivery',
+        'delivery_cost',
+        'location',
+        'featured',
+        'urgent',
+        'views',
+        'images',
+    ];
+
+    protected $casts = [
+        'delivery'  => 'boolean',
+        'featured'  => 'boolean',
+        'urgent'    => 'boolean',
+        'images'    => 'array',
+        'price'     => 'decimal:2',
+        'delivery_cost' => 'decimal:2',
     ];
 
     public function user()
