@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>¡Cuenta Confirmada! - Cachivacheros</title>
+  <title>¡Bienvenido! - Cachivacheros</title>
   <style>
     /* Reset básico */
     * {
@@ -26,7 +26,7 @@
 
     /* Contenedor principal */
     .container {
-      max-width: 480px;
+      max-width: 450px;
       width: 100%;
       background-color: #2a2a2a;
       border: 1px solid #3d3d3d;
@@ -36,12 +36,32 @@
       box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
     }
 
-    /* Imagen de éxito */
-    .brand-image {
-      width: 120px;
-      height: 120px;
-      object-fit: contain;
+    /* Animación de balanceo para el personaje */
+    @keyframes balanceo {
+      0% {
+        transform: rotate(-6deg);
+      }
+      50% {
+        transform: rotate(6deg);
+      }
+      100% {
+        transform: rotate(-6deg);
+      }
+    }
+
+    /* Contenedor de la imagen para centrar el eje de rotación abajo */
+    .image-container {
+      display: inline-block;
       margin-bottom: 24px;
+      transform-origin: bottom center;
+      animation: balanceo 3s ease-in-out infinite;
+    }
+
+    .brand-image {
+      width: 130px;
+      height: 130px;
+      object-fit: contain;
+      display: block;
     }
 
     /* Títulos y textos */
@@ -49,51 +69,33 @@
       color: #fbc02d;
       font-size: 28px;
       font-weight: 700;
-      margin-bottom: 12px;
+      margin-bottom: 14px;
       letter-spacing: -0.5px;
     }
 
     p {
       font-size: 16px;
       color: #cccccc;
-      line-height: 1.5;
-      margin-bottom: 32px;
+      line-height: 1.6;
+      margin-bottom: 8px;
     }
 
-    /* Botón de acción */
-    .btn {
-      display: inline-block;
-      background-color: #fbc02d;
-      color: #121212;
-      text-decoration: none;
-      font-size: 16px;
-      font-weight: bold;
-      padding: 14px 32px;
-      border-radius: 10px;
-      width: 100%;
-      transition: background-color 0.2s ease, transform 0.1s ease;
-      cursor: pointer;
-    }
-
-    .btn:hover {
-      background-color: #f9a825;
-    }
-
-    .btn:active {
-      transform: scale(0.98);
+    .subtext {
+      font-size: 14px;
+      color: #8e8e8e;
     }
 
     /* Footer */
     footer {
       margin-top: 32px;
       font-size: 13px;
-      color: #666666;
+      color: #555555;
     }
 
-    /* Ajustes para pantallas muy pequeñas */
+    /* Ajustes para pantallas de celulares */
     @media (max-width: 400px) {
       .container {
-        padding: 30px 20px;
+        padding: 35px 20px;
       }
       h1 {
         font-size: 24px;
@@ -107,16 +109,17 @@
 <body>
 
   <div class="container">
-    <img src="https://res.cloudinary.com/duwvw6q2c/image/upload/v1777762389/descarga_ao5z8k.png" alt="Cachivacheros" class="brand-image">
+    <div class="image-container">
+      <img src="https://res.cloudinary.com/duwvw6q2c/image/upload/v1777762389/descarga_ao5z8k.png" alt="Cachivacheros" class="brand-image">
+    </div>
 
-    <h1>¡Todo listo!</h1>
-    <p>Tu cuenta ha sido confirmada con éxito. Ya puedes volver a la aplicación para iniciar sesión y continuar explorando.</p>
-
-    <a href="https://tu-app-url.com/login" class="btn">Volver a la aplicación</a>
+    <h1>¡Has sido aceptado!</h1>
+    <p>Tu cuenta ha sido confirmada correctamente.</p>
+    <p class="subtext">Ya puedes regresar a la aplicación para iniciar sesión.</p>
   </div>
 
   <footer>
-    <p style="margin-bottom: 0; font-size: 13px; color: #666666;">© 2026 Cachivacheros</p>
+    <p>© 2026 Cachivacheros</p>
   </footer>
 
 </body>
